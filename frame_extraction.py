@@ -91,24 +91,3 @@ def extract_frames(video_path, output_folder, frame_interval=1, image_format='pn
     print(f"Total frames read from video: {frame_count_read}")
     print(f"Total frames saved to '{output_folder}': {frame_count_saved}")
     print("-" * 30)
-
-
-# --- HOW TO USE ---
-if __name__ == "__main__":
-    # --- Configuration ---
-    # 1. Specify the path to your input MP4 file
-    input_video_file = 'test_video/_MXxJT8Mk4k.mp4'
-
-    # 2. Specify the folder where you want to save the frames
-    output_frames_folder = 'video_frames_output'
-
-    # 3. Set the frame interval (optional)
-    #    1 = save every frame
-    #    N = save every Nth frame (e.g., 30 for approx. 1 frame per second if video is 30fps)
-    interval = 10
-
-    # 4. Choose output image format ('png' or 'jpg')
-    img_format = 'png'
-    # --- End Configuration ---
-
-    extract_frames(input_video_file, output_frames_folder, frame_interval=interval, image_format=img_format)
